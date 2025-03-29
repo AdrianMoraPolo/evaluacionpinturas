@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Pinturas Citadel</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <a href="#contenido-principal" class="sr-only">Saltar al contenido</a>
+
+ 
+    <header>
+        <img src="images/citadel-icon.png" alt="" style="width: 180px; height: auto; vertical-align: middle; margin-right: 10px;">
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nuestrastiendas">Nuestras tiendas</a></li>
+                <li><a href="#carrito"><span aria-hidden="true">🛒</span> Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="contenido-principal">
+        <section id="banner">
+            <div class="banner-content">
+                <h2>¡Descubre nuestras pinturas Citadel!</h2>
+                <p>Colores vibrantes, duraderos y perfectos para tus miniaturas. ¡Haz que tu colección cobre vida!</p>
+                <a href="#productos" class="banner-button">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección de productos -->
+        <section id="productos" aria-labelledby="titulo-productos">
+
+            <h2 id="titulo-productos">Nuestras Pinturas</h2>
+            <div class="productos-grid">
+                <article class="producto">
+                    <img src="images/khorne-red.jpg" alt="">
+                    <h3>Khorne Red</h3>
+                    <p>Color oscuro y profundo, perfecto para tela roja.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Khorne Red</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/flash-gitz-yellow.jpg" alt="">
+                    <h3>Flash Gitz Yellow</h3>
+                    <p>Ideal para detalles llamativos en amarillos.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Flash Gitz Yellow</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/lothern-blue.jpg" alt="">
+                    <h3>Lothern Blue</h3>
+                    <p>Azul claro con un suave acabado mate.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Lothern Blue</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/moot-green.jpg" alt="">
+                    <h3>Moot Green</h3>
+                    <p>Aporta brillo y energía a tus miniaturas.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Moot Green</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/white-scar.jpg" alt="">
+                    <h3>White Scar</h3>
+                    <p>Color oscuro y profundo, perfecto para tela roja.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel White Scar</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/naggaroth-night.jpg" alt="">
+                    <h3>Naggaroth Night</h3>
+                    <p>Morado oscuro, como la noche de Naggaroth.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Naggaroth Night</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/zandri-dust.jpg" alt="">
+                    <h3>Zandri Dust</h3>
+                    <p>Marrón claro como las arenas del desierto.</p>
+                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Zandri Dust</span></button>
+                </article>
+                <article class="producto">
+                    <img src="images/jokaero-orange.jpg" alt="">
+                    <h3>Jokaero Orange</h3>
+                    <p>Naranja suave ideal para iluminar y dar luz.</p>
+                    <button>Agregar al carrito <span class="sr-only">Pintura Citadel Jokaero Orange</span></button>
+                </article>
+            </div>
+        </section>
+        <section id="video-guia">
+            <div class="video-tarjeta">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6CYxpBJukm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div style="max-width: 400px; text-align: left;">
+                    <h2 class="h2video" style="font-size: 1.2em;">Tutorial de Pintura Miniaturas</h2>
+                    <p class="textovideo" style="font-size: 1em;">Descubre técnicas avanzadas para pintar miniaturas con Juan Hidalgo. Aprende a mejorar tus habilidades con consejos profesionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contáctanos</h2>
+            <h3>¿Necesitas una de nuestras pinturas y no está en la web?</h3>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+         <p>&copy; 2025 Tienda de Pinturas Citadel - Todos los derechos reservados</p>
+        <nav aria-label="Navegación secundaria">
+            <ul>
+                <li><a href="#accesibilidad">Accesibilidad</a></li>
+                <li><a href="#privacidad">Política de Privacidad</a></li>
+                <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
