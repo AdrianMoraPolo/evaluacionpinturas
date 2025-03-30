@@ -11,7 +11,13 @@
 
  
     <header>
-        <img src="images/citadel-icon.png" alt="" style="width: 180px; height: auto; vertical-align: middle; margin-right: 10px;">
+        <div style="display: flex; align-items: center; justify-content: center; position: relative; padding-top: 50px;">
+            <img src="images/citadel-icon.png" alt="" 
+                 style="width: 180px; height: auto; position: absolute; left: 20px;">
+            <h1 style="margin: 0;">Explora nuestros colores</h1>
+        </div>
+        
+        
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#productos">Productos</a></li>
@@ -20,9 +26,11 @@
                 <li><a href="#carrito"><span aria-hidden="true">🛒</span> Carrito</a></li>
             </ul>
         </nav>
+        
     </header>
     
     <main id="contenido-principal">
+
         <section id="banner">
             <div class="banner-content">
                 <h2>¡Descubre nuestras pinturas Citadel!</h2>
@@ -86,15 +94,26 @@
                 </article>
             </div>
         </section>
-        <section id="video-guia">
+
+         <!-- Vídeo -->
+        <section id="video-guia" aria-labelledby="video-guia-title">
+            <h2 id="video-guia-title" class="sr-only">Tutorial de Pintura Miniaturas</h2>
+        
             <div class="video-tarjeta">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6CYxpBJukm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/6CYxpBJukm0" 
+                        title="Tutorial de Pintura Miniaturas de Juan Hidalgo"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        aria-label="Video tutorial de pintura de miniaturas con Juan Hidalgo, mostrando técnicas avanzadas para pintar figuras"></iframe>
                 <div style="max-width: 400px; text-align: left;">
-                    <h2 class="h2video" style="font-size: 1.2em;">Tutorial de Pintura Miniaturas</h2>
-                    <p class="textovideo" style="font-size: 1em;">Descubre técnicas avanzadas para pintar miniaturas con Juan Hidalgo. Aprende a mejorar tus habilidades con consejos profesionales.</p>
+                    <h3 class="h2video" style="font-size: 1.2em;" tabindex="0">Tutorial de Pintura Miniaturas</h3>
+                    <p class="textovideo" style="font-size: 1em;" tabindex="0">Descubre técnicas avanzadas para pintar miniaturas con Juan Hidalgo. Aprende a mejorar tus habilidades con consejos profesionales.</p>
                 </div>
             </div>
         </section>
+        
 
         <!-- Formulario de contacto -->
         <section id="contacto" aria-labelledby="titulo-contacto">

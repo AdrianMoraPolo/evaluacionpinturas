@@ -190,8 +190,7 @@ footer nav ul li a {
 }
 
 /* Vídeo */
-.video-tarjeta{
-
+.video-tarjeta {
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -201,15 +200,16 @@ footer nav ul li a {
     padding: 1rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
     height: 350px;
-
 }
 
-.h2video{
+.h2video {
     color: #ffffff;
 }
-.textovideo{
+
+.textovideo {
     color: #ffffff;
 }
+
 
 /* Formulario de contacto */
 #contacto {
