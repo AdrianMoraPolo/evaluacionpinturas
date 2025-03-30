@@ -48,52 +48,62 @@
                     <img src="images/khorne-red.jpg" alt="">
                     <h3>Khorne Red</h3>
                     <p>Color oscuro y profundo, perfecto para tela roja.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Khorne Red</span></button>
+                    <button id="agregar-khorne" class="agregar-carrito">Agregar al carrito<span class="sr-only">Pintura Citadel Khorne Red</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/flash-gitz-yellow.jpg" alt="">
                     <h3>Flash Gitz Yellow</h3>
                     <p>Ideal para detalles llamativos en amarillos.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Flash Gitz Yellow</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel Flash Gitz Yellow</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/lothern-blue.jpg" alt="">
                     <h3>Lothern Blue</h3>
                     <p>Azul claro con un suave acabado mate.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Lothern Blue</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel Lothern Blue</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/moot-green.jpg" alt="">
                     <h3>Moot Green</h3>
                     <p>Aporta brillo y energía a tus miniaturas.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Moot Green</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel Moot Green</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/white-scar.jpg" alt="">
                     <h3>White Scar</h3>
                     <p>Color oscuro y profundo, perfecto para tela roja.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel White Scar</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel White Scar</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/naggaroth-night.jpg" alt="">
                     <h3>Naggaroth Night</h3>
                     <p>Morado oscuro, como la noche de Naggaroth.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Naggaroth Night</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel Naggaroth Night</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/zandri-dust.jpg" alt="">
                     <h3>Zandri Dust</h3>
                     <p>Marrón claro como las arenas del desierto.</p>
-                    <button>Agregar al carrito<span class="sr-only">Pintura Citadel Zandri Dust</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito<span class="sr-only">Pintura Citadel Zandri Dust</span></button>
                 </article>
                 <article class="producto">
                     <img src="images/jokaero-orange.jpg" alt="">
                     <h3>Jokaero Orange</h3>
                     <p>Naranja suave ideal para iluminar y dar luz.</p>
-                    <button>Agregar al carrito <span class="sr-only">Pintura Citadel Jokaero Orange</span></button>
+                    <button class="agregar-carrito"></button>>Agregar al carrito <span class="sr-only">Pintura Citadel Jokaero Orange</span></button>
                 </article>
             </div>
+            <!-- Modal -->
+            <div id="modal" class="modal" role="dialog" aria-labelledby="modal-titulo" aria-hidden="true">
+                <div class="modal-content">
+                    <span id="cerrar-modal" class="close" aria-label="Cerrar modal">&times;</span>
+                        <h2 id="modal-titulo">Pintura agregada al carrito</h2>
+                        <p id="modal-mensaje">La pintura se ha añadido correctamente a tu carrito.</p>
+                        <button id="cerrar-modal-btn" class="modal-btn">Cerrar</button>
+                </div>
+            </div>
         </section>
+        
 
          <!-- Vídeo -->
         <section id="video-guia" aria-labelledby="video-guia-title">
@@ -145,6 +155,39 @@
             </ul>
         </nav>
     </footer>
+    <script>
+
+        const botonesAgregar = document.querySelectorAll('.producto button');
+        const modal = document.getElementById('modal');
+        const cerrarModalBtn = document.getElementById('cerrar-modal-btn');
+        const cerrarModal = document.getElementById('cerrar-modal');
+        
+        // Abrir el modal
+        function abrirModal() {
+            modal.style.display = "block";
+            modal.setAttribute('aria-hidden', 'false');
+            cerrarModalBtn.focus(); 
+        }
+        // Cerrar el modal
+        function cerrarModalFunc() {
+            modal.style.display = "none";
+            modal.setAttribute('aria-hidden', 'true');
+            botonesAgregar[0].focus(); 
+        }
+        botonesAgregar.forEach(button => {
+            button.addEventListener('click', () => {
+                abrirModal();
+            });
+        });
+        cerrarModal.addEventListener('click', cerrarModalFunc);
+        cerrarModalBtn.addEventListener('click', cerrarModalFunc);
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                cerrarModalFunc();
+            }
+        });
+        </script>
+        
 </body>
 
 </html>
